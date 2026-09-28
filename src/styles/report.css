@@ -1,0 +1,62 @@
+/* ===== Report («Разбор встречи») ===== */
+.rp-pending { left: 208px; top: 172px; width: 1008px; height: 400px; }
+.rp-pending h2 { position: absolute; left: 60px; top: 60px; margin: 0; color: var(--light); font-family: var(--display); font-size: 40px; font-weight: 700; }
+.rp-pending p { position: absolute; left: 60px; top: 130px; width: 820px; margin: 0; color: var(--lighter); font-family: var(--text); font-size: 20px; font-weight: 500; line-height: 28px; }
+.rp-progress { position: absolute; left: 60px; top: 260px; width: 820px; height: 8px; overflow: hidden; border-radius: 4px; background: var(--bg); }
+.rp-progress i { position: absolute; left: -40%; width: 40%; height: 100%; border-radius: 4px; background: var(--accent); animation: rp-progress 1.4s ease-in-out infinite; }
+@keyframes rp-progress { to { left: 100%; } }
+
+.rp-na { font-family: var(--text); font-size: 15px; font-weight: 500; }
+.rp-skills { left: 208px; top: 172px; width: 1008px; height: 367px; }
+.rp-skills .card-title { top: 25.6px; }
+.rp-skills-meta { position: absolute; left: 36.4px; top: 69.6px; margin: 0; color: var(--lighter); font-family: var(--text); font-size: 16px; font-weight: 500; line-height: 22px; white-space: nowrap; }
+.rp-skills-total { position: absolute; right: 36.7px; top: 22.8px; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
+.rp-skills-total small { color: var(--light); font-family: var(--text); font-size: 14px; font-weight: 700; line-height: 18px; }
+.rp-skill-grid { position: absolute; left: 36px; top: 110px; display: grid; grid-template-columns: repeat(3, 304px); gap: 10px 12px; margin: 0; padding: 0; list-style: none; }
+.rp-skill-grid li { display: flex; align-items: center; justify-content: space-between; height: 48px; padding: 0 20px 0 21px; border-radius: 24px; background: var(--bg); color: var(--light); font-family: var(--text); font-size: 15px; font-weight: 700; }
+.rp-skill-grid li.is-na { color: var(--muted); }
+.rp-skills-note { position: absolute; left: 37px; top: 337px; margin: 0; color: var(--muted); font-family: var(--text); font-size: 13.5px; font-weight: 500; line-height: 18px; }
+
+.rp-outcome { left: 1308px; top: 172px; width: 522px; height: 367px; background: var(--muted); color: var(--bg); }
+.rp-outcome-kicker { position: absolute; left: 37px; top: 36.5px; margin: 0; font-family: var(--display); font-size: 14px; font-weight: 800; line-height: 18px; text-transform: uppercase; }
+.rp-outcome h2 { position: absolute; left: 37px; top: 74.6px; width: 330px; margin: 0; color: var(--light); font-family: var(--display); font-size: 35.5px; font-weight: 700; line-height: 36.5px; }
+.rp-outcome.is-no-deal h2 { color: var(--accent); }
+.rp-outcome ul { position: absolute; left: 37px; top: 193px; width: 460px; max-height: 108px; overflow: hidden; display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.rp-outcome li { position: relative; padding-left: 22px; overflow: hidden; font-family: var(--text); font-size: 16px; font-weight: 700; line-height: 20px; white-space: nowrap; text-overflow: ellipsis; }
+.rp-outcome li::before { content: ""; position: absolute; left: 0; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--bg); }
+.rp-outcome-note { position: absolute; left: 37px; top: 314px; width: 460px; margin: 0; font-family: var(--text); font-size: 14px; font-weight: 500; line-height: 18px; }
+
+.rp-moments { left: 208px; top: 572px; width: 1008px; height: 451px; }
+.rp-moments .card-title { top: 23.6px; }
+.rp-moments-note { position: absolute; right: 36px; top: 39px; margin: 0; color: var(--lighter); font-family: var(--text); font-size: 15px; font-weight: 700; line-height: 20px; }
+.rp-empty { position: absolute; left: 36px; top: 100px; margin: 0; color: var(--lighter); font-family: var(--text); font-size: 18px; }
+.rp-moments ol { position: absolute; left: 24px; top: 84px; display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.rp-moments li { position: relative; width: 960px; height: 106px; border: 2.5px solid transparent; border-radius: 20px; background: var(--bg); }
+.rp-moments li.is-key { border-color: var(--accent); }
+.rp-time { position: absolute; left: 17.5px; top: 15.5px; width: 76px; height: 32px; border-radius: 16px; background: var(--card); color: var(--light); font-family: var(--text); font-size: 14px; font-weight: 800; line-height: 32px; text-align: center; }
+.rp-moments li.is-key .rp-time { background: var(--accent); color: var(--card); }
+.rp-moments li strong { position: absolute; left: 107.5px; top: 19.2px; color: var(--light); font-family: var(--text); font-size: 18px; font-weight: 700; line-height: 24px; white-space: nowrap; }
+.rp-moments li em { position: absolute; right: 22px; top: 23.5px; color: var(--cream); font-family: var(--text); font-size: 14px; font-style: normal; font-weight: 700; line-height: 18px; }
+.rp-moments li.is-key em { color: var(--accent); }
+.rp-moments li p { position: absolute; left: 18.8px; top: 58.5px; width: 640px; margin: 0; overflow: hidden; color: var(--lighter); font-family: var(--text); font-size: 15px; font-weight: 500; line-height: 20px; white-space: nowrap; text-overflow: ellipsis; }
+.rp-moments li small { position: absolute; left: 19.6px; top: 79.4px; width: 640px; overflow: hidden; color: var(--muted); font-family: var(--text); font-size: 14px; font-weight: 500; line-height: 18px; white-space: nowrap; text-overflow: ellipsis; }
+.rp-moments li button { position: absolute; right: 22.5px; top: 61.5px; color: var(--accent); font-family: var(--display); font-size: 16px; font-weight: 700; }
+.rp-moments li button:hover { text-decoration: underline; }
+
+.rp-strong { left: 208px; top: 572px; width: 492px; height: 451px; }
+.rp-strong-ticket { --perf-y: 57px; --notch: 11px; left: 24px; top: 88px; width: 444px; height: 176px; border-radius: 30px; }
+.rp-strong-ticket span { position: absolute; left: 38px; top: 23px; font-family: var(--text); font-size: 13px; font-weight: 700; line-height: 18px; }
+.rp-strong-ticket .perforation { position: absolute; left: 33px; right: 33px; top: 54px; color: var(--card); }
+.rp-strong-ticket p { position: absolute; left: 38px; top: 78px; width: 372px; margin: 0; font-family: var(--text); font-size: 16px; font-weight: 500; line-height: 23px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.rp-strong-comment { position: absolute; left: 36px; top: 294px; width: 430px; margin: 0; color: var(--lighter); font-family: var(--text); font-size: 16px; font-weight: 500; line-height: 22px; }
+.rp-growth { left: 724px; top: 572px; width: 492px; height: 451px; background: var(--muted); }
+.rp-growth-text { position: absolute; left: 36px; top: 86px; width: 425px; margin: 0; color: var(--light); font-family: var(--text); font-size: 18.5px; font-weight: 700; line-height: 28px; }
+.rp-growth-chip { position: absolute; left: 36px; top: 278px; display: flex; align-items: center; gap: 10px; height: 40px; padding: 0 22px 0 16px; border-radius: 20px; background: var(--bg); color: var(--light); font-family: var(--text); font-size: 14px; font-weight: 700; white-space: nowrap; }
+.rp-growth-chip i { width: 12px; height: 12px; border-radius: 50%; background: var(--light); }
+.rp-growth-foot { position: absolute; left: 36px; top: 363px; margin: 0; color: var(--bg); font-family: var(--text); font-size: 14.5px; font-weight: 700; line-height: 18px; }
+
+.rp-btn-accent { border-color: var(--light) !important; }
+.rp-btn-dark { border-color: var(--light) !important; box-shadow: 0 0 10px rgba(205, 223, 248, 0.7) !important; }
+.rp-seed-note { position: absolute; left: 1330px; top: 785.5px; margin: 0; color: var(--lighter); font-family: var(--text); font-size: 14.5px; font-weight: 700; line-height: 18px; }
+.rp-history-link { position: absolute; left: 1330px; top: 957px; color: var(--muted); font-family: var(--text); font-size: 14.5px; font-weight: 700; line-height: 18px; }
+.rp-history-link:hover { color: var(--light); text-decoration: underline; }

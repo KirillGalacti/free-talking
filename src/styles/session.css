@@ -1,0 +1,56 @@
+/* ===== Layout B: session header ===== */
+.session-header { position: absolute; inset: 0 0 auto 0; height: 180px; }
+.session-logo { position: absolute; left: 100px; top: 22px; pointer-events: none; }
+.session-title { position: absolute; left: 211.5px; top: 48.5px; margin: 0; color: var(--light); font-family: var(--display); font-size: 24px; font-weight: 700; line-height: 30px; white-space: nowrap; }
+.session-subtitle { position: absolute; left: 212px; top: 78px; margin: 0; color: var(--lighter); font-family: var(--text); font-size: 14px; font-weight: 500; line-height: 18px; white-space: nowrap; }
+.pill-outline.thick { border-width: 3px; }
+
+.stage-track { position: absolute; inset: 0; margin: 0; padding: 0; list-style: none; pointer-events: none; }
+.stage-track-line { position: absolute; left: 760px; top: 131.5px; width: 398px; height: 3px; background: var(--muted); }
+.stage-step { position: static; color: var(--card); }
+.stage-step.is-done { color: var(--muted); }
+.stage-step.is-active { color: var(--accent); }
+.stage-numeral { position: absolute; color: inherit; }
+.stage-dot { position: absolute; top: 133px; width: 14px; height: 14px; margin: -7px 0 0 -7px; border: 2px solid var(--muted); border-radius: 50%; background: var(--bg); }
+.stage-step.is-done .stage-dot { background: var(--muted); }
+.stage-step.is-active .stage-dot { width: 20px; height: 20px; margin: -10px 0 0 -10px; border: 0; background: var(--accent); box-shadow: 0 0 10px #ff6547; }
+.stage-label { position: absolute; top: 149.1px; transform: translateX(-50%); color: var(--muted); font-family: var(--text); font-size: 14px; font-weight: 700; line-height: 18px; white-space: nowrap; }
+.stage-step.is-active .stage-label { color: var(--accent); }
+
+/* ===== Brief («проверка перед стартом») ===== */
+.bf-main { left: 120px; top: 208px; width: 880px; height: 815px; }
+.bf-kicker { position: absolute; left: 48px; top: 48px; margin: 0; color: var(--accent); font-family: var(--display); font-size: 14px; font-weight: 800; line-height: 18px; text-transform: uppercase; }
+.bf-title { position: absolute; left: 49px; top: 79px; width: 800px; margin: 0; overflow: hidden; color: var(--light); font-family: var(--display); font-size: 47px; font-weight: 700; line-height: 62px; white-space: nowrap; text-overflow: ellipsis; }
+.bf-section { position: absolute; left: 48px; width: 830px; margin: 0; }
+.bf-section h3 { margin: 0; color: var(--accent); font-family: var(--display); font-size: 24px; font-weight: 800; line-height: 28px; text-transform: uppercase; }
+.bf-section p { margin: 4px 0 0; color: var(--lighter); font-family: var(--text); font-size: 20px; font-weight: 500; line-height: 28px; }
+.bf-task { position: absolute; left: 32px; top: 432px; width: 816px; height: 130px; border: 2px solid var(--accent); border-radius: 24px; }
+.bf-task h3 { position: absolute; left: 32px; top: 20px; margin: 0; color: var(--accent); font-family: var(--display); font-size: 24px; font-weight: 800; line-height: 28px; text-transform: uppercase; }
+.bf-task p { position: absolute; left: 31px; top: 55.5px; width: 720px; margin: 0; color: var(--light); font-family: var(--text); font-size: 22px; font-weight: 700; line-height: 32px; }
+.bf-limits { position: absolute; left: 48px; top: 586px; width: 810px; margin: 0; color: var(--cream); }
+.bf-limits h3 { margin: 0; font-family: var(--display); font-size: 24px; font-weight: 800; line-height: 28px; text-transform: uppercase; }
+.bf-limits p { margin: 5px 0 0; font-family: var(--text); font-size: 20px; font-weight: 500; line-height: 28px; }
+.bf-limits b { font-weight: 800; }
+.bf-foot { position: absolute; left: 49px; top: 764px; margin: 0; color: var(--muted); font-family: var(--text); font-size: 16px; font-weight: 500; line-height: 20px; }
+
+.cp-chip { position: absolute; display: flex; align-items: center; height: 40px; padding: 0 22px 0 20px; border: 2px solid var(--muted); border-radius: 20px; color: var(--light); font-family: var(--text); font-size: 14px; font-weight: 700; white-space: nowrap; }
+.bf-facts { position: absolute; left: 1040px; top: 268px; width: 760px; height: 268px; border-radius: 28px; background: var(--light); color: var(--card); }
+.bf-facts h2 { position: absolute; left: 36px; top: 27px; margin: 0; font-family: var(--display); font-size: 28.6px; font-weight: 700; line-height: 38px; }
+.bf-facts ul { position: absolute; left: 38px; top: 80px; display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.bf-facts li { position: relative; padding-left: 27px; font-family: var(--text); font-size: 18px; font-weight: 700; line-height: 24px; white-space: nowrap; }
+.bf-facts li::before { content: ""; position: absolute; left: 0; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); }
+.bf-facts small { position: absolute; left: 37px; top: 226px; font-family: var(--text); font-size: 15px; font-weight: 500; line-height: 20px; }
+.bf-session { position: absolute; left: 1040px; top: 560px; width: 760px; height: 380px; border-radius: 28px; background: var(--card); }
+.bf-session h2 { position: absolute; left: 36px; top: 26px; margin: 0; color: var(--light); font-family: var(--display); font-size: 29px; font-weight: 700; line-height: 36px; }
+.bf-session .lock { position: absolute; left: 700px; top: 29px; }
+.bf-session dl { position: absolute; left: 37px; top: 84px; display: grid; grid-template-columns: 173px auto; row-gap: 12px; margin: 0; }
+.bf-session dt { color: var(--muted); font-family: var(--text); font-size: 16px; font-weight: 600; line-height: 22px; }
+.bf-session dd { margin: 0; color: var(--light); font-family: var(--text); font-size: 17px; font-weight: 700; line-height: 22px; }
+.seed-box { position: absolute; display: flex; align-items: center; border-radius: 16px; background: var(--bg); }
+.seed-box span { color: var(--muted); font-family: var(--text); font-size: 13px; font-weight: 600; }
+.seed-box strong { margin-left: 18px; color: var(--cream); font-family: var(--display); font-size: 19px; font-weight: 700; letter-spacing: 0.4px; }
+.seed-box button { margin-left: auto; color: var(--accent); font-family: var(--display); font-size: 16.4px; font-weight: 700; }
+.seed-box button:hover:not(:disabled) { text-decoration: underline; }
+.bf-seed { left: 24px; top: 262px; width: 712px; height: 60px; padding: 0 28px 0 28px; }
+.bf-session-note { position: absolute; left: 37px; top: 338px; margin: 0; color: var(--lighter); font-family: var(--text); font-size: 14px; font-weight: 500; line-height: 18px; }
+.pill-cta.start { background: var(--accent); border-color: var(--light); color: var(--card); box-shadow: 0 0 10px #ff6547; }

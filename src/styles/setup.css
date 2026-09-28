@@ -1,0 +1,316 @@
+/* ===== Layout A: rail + page header (setup & report screens) ===== */
+.app-rail { position: absolute; left: 40px; top: 28px; width: 120px; height: 1010px; }
+.app-rail-art { position: absolute; inset: 0; pointer-events: none; user-select: none; }
+.app-rail-logo { position: absolute; left: 19px; top: 20px; width: 76px; height: 76px; border-radius: 50%; }
+.app-rail-spot { position: absolute; left: 32px; width: 50px; height: 50px; margin-top: -28px; border-radius: 50%; }
+.app-rail-spot:hover { box-shadow: 0 0 0 3px rgba(205, 223, 248, 0.25); }
+
+.page-title {
+  position: absolute; left: 244px; top: 47px; margin: 0;
+  color: var(--accent); font-family: var(--display); font-size: 60px; font-weight: 700; line-height: 60px; white-space: nowrap;
+}
+.page-breadcrumb {
+  position: absolute; left: 244px; top: 114px; margin: 0;
+  color: var(--light); font-family: var(--display); font-size: 12px; font-weight: 400; line-height: 16px; white-space: nowrap;
+}
+.page-search {
+  position: absolute; left: 1507px; top: 67px; width: 270px; height: 41px;
+  display: flex; align-items: center; border-radius: 20.5px; background: var(--light);
+}
+.page-search img { position: absolute; left: 13px; top: 6px; }
+.page-search input {
+  position: absolute; left: 70px; top: 0; width: 190px; height: 41px; padding: 0; border: 0; outline: 0; background: transparent;
+  color: var(--card); font-family: var(--display); font-size: 15px; font-weight: 500;
+}
+.page-search input::placeholder { color: var(--card); opacity: 1; }
+.page-profile { position: absolute; left: 1785px; top: 63px; width: 49px; height: 49px; border-radius: 50%; }
+.page-profile img { display: block; }
+
+/* ===== Stepper panel «Новая сессия» ===== */
+.setup-steps { left: 208px; top: 172px; width: 372px; height: 851px; }
+.setup-steps-title {
+  position: absolute; left: 37px; top: 26.6px; margin: 0;
+  color: var(--light); font-family: var(--display); font-size: 32px; font-weight: 800; line-height: 34px;
+}
+.setup-steps-title.is-accent { color: var(--accent); }
+.setup-steps ol { position: absolute; inset: 0; margin: 0; padding: 0; list-style: none; }
+.setup-step { position: static; }
+.setup-step-number { position: absolute; }
+.setup-step-label {
+  position: absolute; left: 96.9px;
+  font-family: var(--display); font-size: 24px; font-weight: 700; line-height: 30px; white-space: nowrap;
+}
+.setup-step-sub {
+  position: absolute; left: 96.4px;
+  color: var(--lighter); font-family: var(--text); font-size: 14px; font-weight: 800; line-height: 18px; white-space: nowrap;
+}
+.setup-step-line { position: absolute; left: 52px; width: 3px; height: 38px; }
+.setup-steps-note {
+  position: absolute; left: 37px; top: 773.3px; width: 305px; margin: 0;
+  color: var(--muted); font-family: var(--text); font-size: 14px; font-weight: 600; line-height: 19.5px;
+}
+
+/* ===== Common setup cards ===== */
+.card-title {
+  position: absolute; left: 37px; top: 29.5px; margin: 0;
+  color: var(--light); font-family: var(--display); font-size: 32px; font-weight: 700; line-height: 40px; white-space: nowrap;
+}
+.card-sub {
+  position: absolute; left: 36px; margin: 0;
+  color: var(--lighter); font-family: var(--text); font-size: 15px; font-weight: 500; line-height: 21px;
+}
+.card-help {
+  position: absolute; margin: 0;
+  color: var(--lighter); font-family: var(--text); font-size: 14px; font-weight: 500; line-height: 21px;
+}
+.card-label {
+  position: absolute; margin: 0;
+  color: var(--lighter); font-family: var(--text); font-size: 16px; font-weight: 700; line-height: 20px;
+}
+
+/* option rows (radio list) */
+.option-list { position: absolute; left: 36px; width: 529px; display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.option-row {
+  position: relative; display: flex; align-items: center; gap: 15px; width: 529px; height: 62px; padding: 0 17px;
+  border: 2.5px solid transparent; border-radius: 20px; background: var(--bg); text-align: left;
+  transition: border-color 0.15s;
+}
+.option-row.is-on { border-color: var(--accent); }
+.option-row:not(.is-on):hover { border-color: rgba(205, 223, 248, 0.25); }
+.option-row .radio { margin-left: -1px; }
+.option-copy { display: grid; gap: 6px; margin-top: 4px; }
+.option-copy strong { color: var(--silver); font-family: var(--display); font-size: 17px; font-weight: 700; line-height: 22px; }
+.option-copy small { color: var(--muted); font-family: var(--text); font-size: 14px; font-weight: 400; line-height: 18px; }
+.option-row.is-on .option-copy strong { color: var(--light); }
+.option-row.is-on .option-copy small { color: var(--lighter); }
+
+.chip-wrap { position: absolute; display: flex; flex-wrap: wrap; gap: 12px 11px; margin: -1.5px 0 0 -1.5px; }
+
+.field {
+  position: absolute; width: 529px; border: 0; outline: 0; resize: none;
+  background: var(--light); color: var(--card); font-family: var(--text); font-weight: 500;
+}
+.field::placeholder { color: rgba(84, 76, 76, 0.55); }
+.field-input { height: 60px; padding: 0 26px; border-radius: 30px; font-size: 22px; }
+.field-area { height: 128px; padding: 17px 25px; border-radius: 24px; font-size: 18px; line-height: 25px; caret-color: var(--accent); }
+.field:focus { box-shadow: 0 0 0 2px var(--accent); }
+
+.setup-actions-note {
+  position: absolute; left: 604px; top: 983px; margin: 0;
+  color: var(--light); font-family: var(--text); font-size: 16px; font-weight: 600; line-height: 22px; white-space: nowrap;
+}
+
+/* dimmed cards when a value comes from a previous session (seed repeat) */
+.panel.is-dimmed > :not(.from-seed) { opacity: 0.32; pointer-events: none; }
+.from-seed {
+  position: absolute; display: flex; align-items: center; gap: 12px; height: 40px; padding: 0 33px 0 15px;
+  border-radius: 20px; background: rgba(84, 76, 76, 0.96);
+  color: var(--lighter); font-family: var(--text); font-size: 14px; font-weight: 700; white-space: nowrap;
+}
+.from-seed::before { content: ""; width: 11px; height: 11px; border-radius: 50%; background: var(--muted); }
+
+/* ===== Screen 1: method, topic, role, goal ===== */
+.method-card { left: 604.6px; top: 172px; width: 601px; height: 400px; }
+.role-card { left: 1229.2px; top: 168.3px; width: 601px; height: 404px; }
+.topic-card { left: 604px; top: 595.8px; width: 601px; height: 335px; }
+.goal-card { left: 1229px; top: 596px; width: 601px; height: 334px; }
+.chip-input { width: 170px; outline: 0; text-align: center; }
+.chip-input::placeholder { color: rgba(84, 76, 76, 0.7); }
+.pill.is-idle:disabled { opacity: 1; }
+
+/* ===== Screen: counterparty & difficulty ===== */
+.cp-card { left: 604px; top: 172px; width: 601px; height: 758px; }
+.cp-card .card-sub { top: 74.2px; font-size: 16px; font-weight: 400; }
+.cp-presets { gap: 10px; }
+.cp-ticket { --perf-y: 73px; --notch: 11px; left: 24px; top: 418px; width: 553px; height: 318px; border-radius: 30px; }
+.cp-ticket h3 { position: absolute; left: 36px; top: 22.3px; margin: 0; font-family: var(--display); font-size: 25.6px; font-weight: 800; line-height: 32px; }
+.cp-ticket-style { position: absolute; right: 36.5px; top: 33.3px; font-family: var(--text); font-size: 14.7px; font-weight: 800; line-height: 20px; }
+.cp-ticket-perf { position: absolute; left: 32px; right: 31px; top: 69.5px; color: var(--card); }
+.cp-ticket-role { position: absolute; left: 36px; top: 99.6px; margin: 0; font-family: var(--text); font-size: 16px; font-weight: 700; line-height: 22px; }
+.cp-ticket-topics { position: absolute; left: 36px; top: 125.5px; margin: 0; font-family: var(--text); font-size: 16px; font-weight: 500; line-height: 22px; }
+.cp-ticket-tags { position: absolute; left: 36px; top: 162px; width: 440px; display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.cp-ticket-tags li { height: 32px; padding: 0 15px; border-radius: 16px; background: var(--card); color: var(--light); font-family: var(--text); font-size: 13.7px; font-weight: 800; line-height: 32px; white-space: nowrap; }
+.cp-ticket-warning { position: absolute; left: 34px; top: 245px; width: 490px; display: flex; gap: 9px; }
+.cp-ticket-warning svg { flex: none; margin-top: 2px; }
+.cp-ticket-warning p { margin: 2px 0 0; font-family: var(--text); font-size: 15px; font-weight: 700; line-height: 20px; }
+
+.cp-visible { left: 1229px; top: 172px; width: 601px; height: 470px; }
+.cp-visible .card-sub { top: 74.3px; width: 530px; }
+.cp-level-row { position: absolute; left: 36px; width: 529px; height: 40px; display: flex; align-items: center; justify-content: space-between; }
+.cp-level-label { color: var(--light); font-family: var(--text); font-size: 17px; font-weight: 700; line-height: 22px; }
+.cp-level { width: 315px; }
+.segmented { gap: 6px; }
+.cp-difficulty { left: 1229px; top: 666px; width: 601px; height: 264px; }
+.cp-difficulty-control { position: absolute; left: 36px; top: 86px; width: 529px; }
+.cp-difficulty-control button { font-weight: 800; }
+.cp-difficulty-copy { left: 36px; top: 153.6px; width: 582px; font-size: 16px; font-weight: 600; line-height: 22px; }
+
+/* ===== Modals over the setup flow ===== */
+.modal-layer { background: rgba(20, 18, 17, 0.66); }
+.assembly-modal { left: 510px; top: 250px; width: 900px; height: 600px; background: var(--card); border: 2px solid var(--muted); border-radius: 30px; box-shadow: 0 4px 40px rgba(0, 0, 0, 0.45); }
+.modal-title { position: absolute; margin: 0; color: var(--light); font-family: var(--display); font-size: 44px; font-weight: 700; line-height: 50px; white-space: nowrap; }
+.assembly-modal .modal-title { left: 47.5px !important; top: 46px !important; }
+.assembly-meta { position: absolute; left: 47px; top: 110px; margin: 0; color: var(--lighter); font-family: var(--text); font-size: 18px; font-weight: 400; line-height: 24px; }
+.assembly-items { margin: 0; padding: 0; list-style: none; }
+.assembly-item { position: absolute; display: flex; align-items: center; gap: 11px; height: 26px; color: var(--light); font-family: var(--text); font-size: 18px; font-weight: 400; line-height: 24px; white-space: nowrap; }
+.assembly-item.is-active { font-weight: 700; }
+.assembly-item.is-pending { color: var(--muted); }
+.assembly-status { position: relative; flex: none; width: 26px; height: 26px; border-radius: 50%; }
+.assembly-item.is-pending .assembly-status { margin: 0 1px; width: 24px; height: 24px; border: 2.5px dashed var(--muted); }
+.assembly-item.is-active .assembly-status { border: 3px solid var(--muted); border-top-color: var(--accent); border-right-color: var(--accent); animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.assembly-dots { position: absolute; left: 49px; top: 445px; display: flex; gap: 22.25px; }
+.assembly-dots i { width: 12px; height: 12px; border-radius: 50%; background: var(--muted); transition: background 0.2s; }
+.assembly-dots i.is-on { background: var(--accent); }
+.assembly-note { position: absolute; left: 48px; top: 491px; margin: 0; color: var(--lighter); font-family: var(--text); font-size: 16px; font-weight: 400; line-height: 22px; white-space: nowrap; }
+.assembly-eta { position: absolute; right: 47px; top: 545px; margin: 0; color: var(--muted); font-family: var(--text); font-size: 14.6px; font-weight: 800; line-height: 18px; }
+.failure-copy { position: absolute; left: 48px; top: 119px; width: 850px; margin: 0; color: var(--light); font-family: var(--text); font-size: 21.6px; font-weight: 500; line-height: 31px; }
+.failure-offer { position: absolute; left: 47px; top: 267px; width: 804px; height: 150px; border-radius: 24px; background: var(--bg); }
+.failure-offer span { position: absolute; left: 28px; top: 30px; color: var(--accent); font-family: var(--display); font-size: 13.9px; font-weight: 800; line-height: 18px; text-transform: uppercase; }
+.failure-offer strong { position: absolute; left: 27px; top: 61px; color: var(--light); font-family: var(--display); font-size: 24px; font-weight: 700; line-height: 30px; white-space: nowrap; }
+.failure-offer small { position: absolute; left: 28px; top: 106px; color: var(--lighter); font-family: var(--text); font-size: 16px; font-weight: 400; line-height: 22px; }
+.modal-close { position: absolute; right: 18px; top: 12px; width: 36px; height: 36px; color: var(--muted); font-size: 30px; line-height: 36px; }
+.modal-close:hover { color: var(--light); }
+
+/* ===== Screen: detailed settings ===== */
+.select-field { position: absolute; height: 52px; border-radius: 26px; background: var(--light); }
+.select-field select {
+  width: 100%; height: 100%; padding: 0 48px 0 25px; border: 0; outline: 0; border-radius: 26px;
+  appearance: none; background: transparent; cursor: pointer;
+  color: var(--card); font-family: var(--text); font-size: 18px; font-weight: 500;
+}
+.select-field select:focus-visible { box-shadow: 0 0 0 2px var(--accent); }
+.select-chevron { position: absolute; right: 26.5px; top: 20.5px; pointer-events: none; }
+.dt-behavior { left: 604px; top: 172px; width: 601px; height: 758px; }
+.dt-behavior .card-sub, .dt-context .card-sub { width: 530px; }
+.dt-level-row { position: absolute; left: 36px; width: 529px; height: 40px; display: flex; align-items: center; justify-content: space-between; }
+.dt-level { width: 303px; }
+.dt-changed { margin-left: 11px; color: var(--accent); font-family: var(--text); font-size: 12.8px; font-style: normal; font-weight: 800; }
+.dt-tactics-label { left: 36px; top: 570.4px; color: var(--light); font-size: 17px; }
+.dt-tactics { position: absolute; left: 36px; top: 602px; width: 529px; }
+.dt-tactics-help { left: 36px; top: 657.7px; width: 520px; line-height: 19px; }
+.dt-context { left: 1229px; top: 172px; width: 601px; height: 470px; }
+.dt-label { font-size: 16px; }
+.dt-known { left: 36px; top: 306px; height: 90px; padding: 15.6px 54px 0 25.6px; border-radius: 24px; font-size: 18px; line-height: 25px; }
+.dt-deal { left: 1229px; top: 666px; width: 601px; height: 264px; }
+.dt-deal-title { font-size: 28px; line-height: 36px; top: 27.1px; }
+.dt-params { left: 36px; top: 78px; width: 540px; column-gap: 10px; margin: -1.5px 0 0 0; }
+.dt-params .chip { padding: 0 17px; font-size: 13.8px; font-weight: 800; }
+.dt-input-row { position: absolute; left: 36px; top: 154px; width: 529px; height: 40px; display: flex; align-items: center; justify-content: space-between; }
+.dt-input { width: 315px; }
+.dt-note { top: 978px; font-size: 13.9px; font-weight: 500; }
+
+/* ===== Screen: exact setup («своя ситуация») ===== */
+.ex-situation { left: 604px; top: 172px; width: 601px; height: 758px; }
+.ex-editor { position: absolute; left: 36px; top: 114px; width: 529px; height: 146px; border-radius: 30px; background: var(--light); overflow: hidden; }
+.ex-backdrop, .ex-editor textarea {
+  position: absolute; inset: 0; margin: 0; padding: 15.2px 45px 0 24px; border: 0;
+  font-family: var(--text); font-size: 18px; font-weight: 400; line-height: 25px; white-space: pre-wrap; overflow-wrap: break-word;
+}
+.ex-backdrop { color: transparent; pointer-events: none; }
+.ex-backdrop mark { border-radius: 5px; background: rgba(255, 101, 71, 0.28); color: transparent; box-shadow: 0 0 0 1px rgba(255, 101, 71, 0.28); }
+.ex-editor textarea { width: 100%; height: 100%; resize: none; outline: 0; background: transparent; color: var(--card); caret-color: var(--accent); }
+.ex-editor:focus-within { box-shadow: 0 0 0 2px var(--accent); }
+.ex-names { position: absolute; left: 36px; top: 274px; width: 529px; height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 24px 0 25px; border-radius: 20px; background: var(--bg); }
+.ex-names span { color: var(--cream); font-family: var(--text); font-size: 15px; font-weight: 700; }
+.ex-names span.is-clean { color: var(--muted); }
+.ex-names button { color: var(--accent); font-family: var(--display); font-size: 15px; font-weight: 700; }
+.ex-names button:hover { text-decoration: underline; }
+.ex-subtitle { position: absolute; left: 36px; top: 365.5px; margin: 0; color: var(--light); font-family: var(--display); font-size: 24px; font-weight: 700; line-height: 30px; }
+.ex-conditions { position: absolute; left: 36px; top: 438px; width: 529px; display: grid; grid-template-columns: 100%; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.ex-conditions li { position: relative; min-width: 0; display: flex; align-items: center; height: 58px; padding: 0 24px 0 25px; border-radius: 20px; background: var(--bg); }
+.ex-conditions input { min-width: 0; padding: 0; border: 0; outline: 0; background: transparent; font-family: var(--text); }
+.ex-conditions input::placeholder { color: var(--muted); }
+.ex-cond-label { width: 190px; color: var(--light); font-size: 15.6px; font-weight: 800; }
+.ex-cond-current { width: 120px; margin-left: 13px; color: var(--lighter); font-size: 15.8px; font-weight: 700; }
+.ex-cond-limit { display: flex; align-items: center; height: 36px; margin-left: auto; padding: 0 21px; border-radius: 18px; background: var(--card); }
+.ex-cond-limit input { field-sizing: content; min-width: 40px; max-width: 170px; color: var(--cream); font-size: 13.9px; font-weight: 800; text-align: center; }
+.ex-cond-limit:focus-within, .ex-conditions input:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--accent); border-radius: 6px; }
+.ex-cond-limit:focus-within { border-radius: 18px; }
+.ex-cond-remove { position: absolute; right: -22px; top: 17px; width: 20px; height: 24px; color: var(--muted); font-size: 20px; opacity: 0; transition: opacity 0.15s; }
+.ex-conditions li:hover .ex-cond-remove, .ex-cond-remove:focus-visible { opacity: 1; }
+.ex-add { position: absolute; left: 36px; top: 718px; color: var(--accent); font-family: var(--text); font-size: 14.6px; font-weight: 800; }
+.ex-add:hover { text-decoration: underline; }
+.ex-counterparty { left: 1229px; top: 172px; width: 601px; height: 486px; }
+.ex-style { position: absolute; left: 36px; top: 220px; width: 529px; }
+.ex-row { position: absolute; left: 36px; width: 529px; height: 40px; display: flex; align-items: center; justify-content: space-between; }
+.ex-row .cp-level-label { font-size: 16px; }
+.ex-level { width: 345px; }
+.ex-rest { position: absolute; left: 36px; top: 456.8px; margin: 0; color: var(--muted); font-family: var(--text); font-size: 12.7px; font-weight: 800; line-height: 17px; white-space: nowrap; }
+.ex-difficulty { left: 1229px; top: 682px; width: 601px; height: 248px; }
+.ex-difficulty .dt-deal-title { top: 28.8px; }
+.ex-difficulty-control { top: 82px; }
+.ex-difficulty-copy { left: 36px; top: 148.8px; width: 545px; font-size: 14.8px; font-weight: 500; line-height: 20px; }
+
+/* ===== Screen: random — what to lock ===== */
+.rl-card { left: 604px; top: 172px; width: 601px; height: 758px; }
+.rl-count { position: absolute; right: 36.7px; top: 43.3px; margin: 0; color: var(--cream); font-family: var(--display); font-size: 14.5px; font-weight: 400; line-height: 18px; }
+.rl-list { position: absolute; left: 36px; top: 90px; width: 529px; display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.rl-list li { position: relative; height: 54px; border-radius: 20px; background: var(--bg); }
+.rl-label { position: absolute; left: 24px; top: 16px; color: var(--light); font-family: var(--text); font-size: 15.9px; font-weight: 700; line-height: 22px; }
+.rl-value { position: absolute; left: 194px; top: 16px; max-width: 190px; overflow: hidden; color: var(--lighter); font-family: var(--text); font-size: 15.8px; font-weight: 500; line-height: 22px; white-space: nowrap; text-overflow: ellipsis; }
+.rl-icon { position: absolute; left: 393px; top: 11px; }
+.rl-auto { position: absolute; left: 193px; top: 16px; display: flex; align-items: center; gap: 11px; color: var(--muted); font-family: var(--text); font-size: 15.8px; font-weight: 500; line-height: 22px; }
+.rl-list .toggle { position: absolute; left: 441px; top: 11px; }
+.rl-list .toggle.is-on { box-shadow: 0 0 12px #ff6547; }
+.rl-how { left: 1229px; top: 172px; width: 601px; height: 500px; }
+.rl-step { position: absolute; left: 0; width: 601px; height: 100px; }
+.rl-step-num { position: absolute; top: -4px; transform: scale(0.97); transform-origin: 0 100%; }
+.rl-step strong { position: absolute; left: 96.9px; top: -4px; color: var(--light); font-family: var(--display); font-size: 23.5px; font-weight: 800; line-height: 30px; white-space: nowrap; }
+.rl-step small { position: absolute; left: 97px; top: 28px; color: var(--lighter); font-family: var(--text); font-size: 13.9px; font-weight: 700; line-height: 18px; white-space: nowrap; }
+.rl-step-line { position: absolute; left: 51.2px; top: 51px; width: 3px; height: 52px; background: var(--light); }
+.rl-how-note { position: absolute; left: 36px; top: 430.8px; width: 570px; margin: 0; color: var(--lighter); font-family: var(--text); font-size: 14.8px; font-weight: 500; line-height: 20px; }
+.rl-seed { left: 1229px; top: 696px; width: 601px; height: 234px; background: var(--muted); color: var(--bg); }
+.rl-seed h2 { position: absolute; left: 37px; top: 29.6px; margin: 0; font-family: var(--display); font-size: 24px; font-weight: 700; line-height: 30px; }
+.rl-seed p { position: absolute; left: 37px; top: 79.7px; width: 540px; margin: 0; font-family: var(--text); font-size: 15.9px; font-weight: 400; line-height: 22px; }
+.rl-seed-hint { position: absolute; left: 36px; top: 164px; display: flex; align-items: center; gap: 15px; font-family: var(--text); font-size: 14.6px; font-weight: 800; }
+
+/* ===== Screen: random — situation assembled ===== */
+.rr-card { left: 604px; top: 172px; width: 601px; height: 758px; }
+.rr-kicker { position: absolute; left: 36.5px; top: 39.7px; margin: 0; color: var(--accent); font-family: var(--display); font-size: 13.7px; font-weight: 800; line-height: 18px; text-transform: uppercase; }
+.rr-title { position: absolute; left: 37px; top: 74.2px; width: 430px; margin: 0; color: var(--light); font-family: var(--display); font-size: 34px; font-weight: 700; line-height: 38px; }
+.rr-summary { position: absolute; left: 36px; top: 182.3px; width: 530px; margin: 0; color: var(--lighter); font-family: var(--text); font-size: 16.8px; font-weight: 500; line-height: 24px; }
+.rr-row { position: absolute; left: 36px; width: 529px; height: 48px; border-radius: 20px; background: var(--bg); }
+.rr-icon { position: absolute; left: 16px; top: 12px; }
+.rr-row.is-locked .rr-icon { left: 20px; top: 12px; }
+.rr-label { position: absolute; left: 56.8px; top: 13px; color: var(--muted); font-family: var(--text); font-size: 14.8px; font-weight: 700; line-height: 22px; }
+.rr-value { position: absolute; left: 187px; top: 13px; max-width: 320px; overflow: hidden; color: var(--light); font-family: var(--text); font-size: 15.9px; font-weight: 700; line-height: 22px; white-space: nowrap; text-overflow: ellipsis; }
+.rr-row.is-locked .rr-value { font-weight: 500; }
+.rr-checks { left: 1229px; top: 172px; width: 601px; height: 380px; }
+.rr-checks ul { position: absolute; left: 37px; top: 95px; display: grid; gap: 24px; margin: 0; padding: 0; list-style: none; }
+.rr-checks li { display: flex; align-items: center; gap: 14px; height: 26px; color: var(--lighter); font-family: var(--text); font-size: 15.7px; font-weight: 600; white-space: nowrap; }
+.rr-checks li svg { width: 26px; height: 26px; }
+.rr-checks-more { position: absolute; left: 37px; top: 344px; margin: 0; color: var(--muted); font-family: var(--text); font-size: 13.7px; font-weight: 800; line-height: 18px; }
+.rr-seed { left: 1229px; top: 576px; width: 601px; height: 354px; background: var(--muted); color: var(--bg); }
+.rr-seed-kicker { position: absolute; left: 36px; top: 37.8px; margin: 0; font-family: var(--display); font-size: 13.8px; font-weight: 800; line-height: 18px; text-transform: uppercase; }
+.rr-seed-value { position: absolute; left: 36px; top: 71.6px; margin: 0; font-family: var(--display); font-size: 43.4px; font-weight: 800; line-height: 50px; letter-spacing: 0.5px; }
+.rr-seed-copy { position: absolute; left: 37px; top: 143.5px; width: 560px; margin: 0; font-family: var(--text); font-size: 15.9px; font-weight: 400; line-height: 22px; }
+.rr-rebuild { left: 36px; top: 236px; width: 529px; height: 58px; justify-content: space-between; padding: 0 28px 0 32px; background: var(--card); border: 2px solid var(--light); box-shadow: 0 0 10px rgba(205, 223, 248, 0.6); color: var(--light); font-size: 24px; font-weight: 400; }
+
+/* ===== Screen: repeat by seed — past sessions ===== */
+.sd-card { left: 604px; top: 172px; width: 601px; height: 758px; }
+.sd-list { position: absolute; left: 36px; top: 120px; width: 529px; display: grid; gap: 16px; margin: 0; padding: 0; list-style: none; }
+.sd-item { position: relative; display: block; width: 529px; height: 134px; border: 2.5px solid transparent; border-radius: 24px; background: var(--bg); text-align: left; transition: border-color 0.15s; }
+.sd-item.is-on { border-color: var(--accent); }
+.sd-item:not(.is-on):hover { border-color: rgba(205, 223, 248, 0.25); }
+.sd-item .radio { position: absolute; left: 20.5px; top: 20.5px; }
+.sd-date { position: absolute; left: 57.5px; top: 21px; color: var(--light); font-family: var(--display); font-size: 18px; font-weight: 700; line-height: 22px; }
+.sd-item.is-on .sd-date { color: var(--accent); }
+.sd-title { position: absolute; left: 131.5px; top: 21px; color: var(--silver); font-family: var(--text); font-size: 16.5px; font-weight: 700; line-height: 22px; white-space: nowrap; }
+.sd-item.is-on .sd-title { color: var(--light); }
+.sd-seed-label { position: absolute; left: 22px; top: 72px; color: var(--muted); font-family: var(--text); font-size: 13px; font-weight: 600; line-height: 18px; }
+.sd-seed { position: absolute; left: 62px; top: 69px; color: var(--muted); font-family: var(--display); font-size: 17px; font-weight: 700; line-height: 22px; letter-spacing: 0.4px; }
+.sd-item.is-on .sd-seed { color: var(--cream); }
+.sd-chip { position: absolute; right: 21.5px; top: 63.5px; height: 34px; padding: 0 21px; border-radius: 17px; background: var(--card); color: var(--muted); font-family: var(--text); font-size: 13px; font-weight: 700; line-height: 34px; white-space: nowrap; }
+.sd-item.is-on .sd-chip { color: var(--light); }
+.sd-repeat { left: 1229px; top: 172px; width: 601px; height: 430px; }
+.sd-repeat ul { position: absolute; left: 37px; top: 99px; display: grid; gap: 22px; margin: 0; padding: 0; list-style: none; }
+.sd-repeat li { display: flex; align-items: center; gap: 13px; height: 26px; color: var(--lighter); font-family: var(--text); font-size: 16px; font-weight: 500; white-space: nowrap; }
+.sd-muted { position: absolute; left: 37px; top: 318.5px; width: 500px; margin: 0; color: var(--muted); font-family: var(--text); font-size: 14.8px; font-weight: 600; line-height: 20.5px; }
+.sd-strong { position: absolute; left: 37px; top: 372.5px; width: 520px; margin: 0; color: var(--cream); font-family: var(--text); font-size: 14.8px; font-weight: 700; line-height: 20.5px; }
+.sd-last { left: 1229px; top: 626px; width: 601px; height: 304px; background: var(--muted); color: var(--bg); }
+.sd-last-kicker { position: absolute; left: 37px; top: 36px; margin: 0; font-family: var(--display); font-size: 13.8px; font-weight: 800; line-height: 18px; text-transform: uppercase; }
+.sd-last h2 { position: absolute; left: 37px; top: 70.5px; width: 540px; margin: 0; overflow: hidden; font-family: var(--display); font-size: 32px; font-weight: 700; line-height: 40px; white-space: nowrap; text-overflow: ellipsis; }
+.sd-last-details { position: absolute; left: 37px; top: 118px; width: 540px; margin: 0; font-family: var(--text); font-size: 16px; font-weight: 700; line-height: 22px; }
+.sd-last-skills { position: absolute; left: 37px; top: 158px; width: 540px; margin: 0; font-family: var(--text); font-size: 14.8px; font-weight: 500; line-height: 20px; }
+.sd-last-note { position: absolute; left: 37px; top: 238px; width: 540px; margin: 0; font-family: var(--text); font-size: 14.8px; font-weight: 700; line-height: 20px; }

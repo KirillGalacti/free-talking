@@ -1,0 +1,36 @@
+/* ===== Replay: restart from a critical moment ===== */
+.rs-list { left: 120px; top: 208px; width: 560px; height: 815px; }
+.rs-list h2 { position: absolute; left: 28px; top: 24px; margin: 0; color: var(--light); font-family: var(--display); font-size: 26px; font-weight: 700; line-height: 32px; }
+.rs-list > p { position: absolute; left: 29px; top: 62.5px; margin: 0; color: var(--lighter); font-family: var(--text); font-size: 14px; font-weight: 500; line-height: 18px; }
+.rs-list ul { position: absolute; left: 24px; top: 104px; display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.rs-item { position: relative; display: block; width: 512px; height: 150px; border: 2.5px solid transparent; border-radius: 24px; background: var(--bg); text-align: left; transition: border-color 0.15s, box-shadow 0.15s; }
+.rs-item.is-on { border-color: var(--accent); box-shadow: 0 0 12px rgba(255, 101, 71, 0.7); }
+.rs-item:not(.is-on):hover { border-color: rgba(205, 223, 248, 0.25); }
+.rs-item .radio { position: absolute; left: 14.5px; top: 20.5px; }
+.rs-time { position: absolute; left: 50px; top: 20px; color: var(--light); font-family: var(--display); font-size: 18px; font-weight: 700; line-height: 22px; }
+.rs-item.is-on .rs-time { color: var(--accent); }
+.rs-item strong { position: absolute; left: 25px; top: 57px; width: 470px; overflow: hidden; color: var(--silver); font-family: var(--text); font-size: 17px; font-weight: 700; line-height: 22px; white-space: nowrap; text-overflow: ellipsis; }
+.rs-item.is-on strong { color: var(--light); }
+.rs-item small { position: absolute; left: 26px; top: 88px; width: 460px; color: var(--muted); font-family: var(--text); font-size: 14px; font-weight: 500; line-height: 19px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.rs-item.is-on small { color: var(--lighter); }
+.rs-empty { width: 500px; color: var(--lighter); font-family: var(--text); font-size: 17px; }
+
+.rs-kicker { position: absolute; left: 740px; top: 211px; margin: 0; color: var(--accent); font-family: var(--display); font-size: 14.5px; font-weight: 800; line-height: 20px; text-transform: uppercase; }
+.rs-title { position: absolute; left: 740px; top: 240px; margin: 0; color: var(--light); font-family: var(--display); font-size: 51.8px; font-weight: 700; line-height: 60px; }
+.rs-ticket { --perf-y: 58px; --notch: 13px; left: 740px; top: 332px; width: 1060px; height: 168px; border-radius: 30px; background: var(--cream); color: var(--card); }
+.rs-ticket span { position: absolute; left: 40px; top: 24px; font-family: var(--display); font-size: 14px; font-weight: 700; line-height: 18px; text-transform: lowercase; }
+.rs-ticket .perforation { position: absolute; left: 34px; right: 34px; top: 54.5px; }
+.rs-quote { position: absolute; left: 40px; top: 79px; width: 980px; margin: 0; overflow: hidden; font-family: var(--text); font-size: 22px; font-weight: 500; line-height: 30px; white-space: nowrap; text-overflow: ellipsis; }
+.rs-answer { position: absolute; left: 40px; top: 130px; width: 980px; margin: 0; overflow: hidden; font-family: var(--text); font-size: 17.5px; font-weight: 700; line-height: 24px; white-space: nowrap; text-overflow: ellipsis; }
+.rs-try { position: absolute; left: 740px; top: 516px; width: 1060px; height: 100px; border-radius: 20px; background: var(--card); }
+.rs-try h2 { position: absolute; left: 32px; top: 13px; margin: 0; color: var(--accent); font-family: var(--display); font-size: 24px; font-weight: 700; line-height: 30px; }
+.rs-try p { position: absolute; left: 33px; top: 53px; width: 1000px; margin: 0; overflow: hidden; color: var(--light); font-family: var(--text); font-size: 20px; font-weight: 700; line-height: 26px; white-space: nowrap; text-overflow: ellipsis; }
+.rs-points { position: absolute; left: 745px; top: 636px; display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.rs-points li { position: relative; padding-left: 24.5px; color: var(--lighter); font-family: var(--text); font-size: 17px; font-weight: 500; line-height: 24px; }
+.rs-points li::before { content: ""; position: absolute; left: 0; top: 7px; width: 10px; height: 10px; border-radius: 50%; background: var(--light); }
+.rs-compare { position: absolute; left: 740px; top: 770px; width: 1060px; height: 160px; border: 2px solid var(--muted); border-radius: 28px; background: var(--bg); }
+.rs-compare h2 { position: absolute; left: 31px; top: 19px; margin: 0; color: var(--light); font-family: var(--display); font-size: 22.5px; font-weight: 700; line-height: 28px; }
+.rs-compare > small { position: absolute; right: 30.6px; top: 29px; color: var(--muted); font-family: var(--text); font-size: 14px; font-weight: 700; line-height: 18px; }
+.rs-compare dl { position: absolute; left: 31px; top: 72px; display: grid; grid-template-columns: repeat(3, 332px); margin: 0; }
+.rs-compare dt { color: var(--muted); font-family: var(--text); font-size: 14px; font-weight: 700; line-height: 18px; }
+.rs-compare dd { margin: 6px 0 0; width: 300px; color: var(--cream); font-family: var(--text); font-size: 17px; font-weight: 500; line-height: 23px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
